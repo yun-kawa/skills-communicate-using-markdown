@@ -14,49 +14,56 @@ _軽量なテキストフォーマット言語である Markdown を使用して
 </header>
 
 <!--
-<<< 作成者メモ: コース開始 >>>
-開始ボタン、Actions の所要時間に関するメモ、そして受講者にこのコースを受講するべき理由を伝えてください。
+<<< 著者注: ステップ 1 >>>
+コースのステップを3～5つ選択してください。
+最初のステップは常に最も難しいので、簡単なものを選びましょう。
+詳しい説明については、docs.github.com へのリンクを参照してください。
+ステップを確認するには、新しいタブを開くようにユーザーに促してください。
 -->
 
-## ようこそ
+## ステップ 1: ヘッダーを追加する
 
-GitHub は単なるコードではありません。ソフトウェアコラボレーションのためのプラットフォームであり、Markdown は開発者が Issue やプルリクエストで明確かつ整理されたコミュニケーションを行うための最も重要な手段の一つです。このコースでは、見出しをより効果的に作成・活用する方法、箇条書きで考えを整理する方法、チェックリストで作業の完了状況を示す方法などを段階的に学びます。さらに、絵文字、画像、リンクを活用して、Markdown を使って作業に深みを加えることもできます。
+_「Markdown を使ったコミュニケーション」へようこそ！ :wave:_
 
-- **対象者**：新規開発者、GitHub 新規ユーザー、学生
-- **学習内容**：Markdown を使用して、コメントまたはテキストファイルにリスト、画像、リンクを追加します。
-- **構築内容**：プレーンテキストファイルを更新し、Markdown フォーマットを追加します。このファイルを使用して、独自の GitHub Pages サイトを立ち上げることができます。
-- **前提条件**：このコースでは、プルリクエストの操作とファイルの編集を行います。これらの操作に慣れていない場合は、まず [GitHub 入門](https://github.com/skills/introduction-to-github) コースを受講することをお勧めします。
-- **所要時間**: このコースは1時間以内で完了します。
+**Markdown とは_？** Markdown は、GitHub 上でコミュニケーションを行うための [軽量構文](https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) です。テキストに書式を設定して、見出し、リスト、**太字**、_斜体_、表など、さまざまなスタイルを追加できます。 GitHub のほとんどの場所で Markdown を使用できます。
 
-このコースでは、以下の内容を学習します。
+- [イシュー](https://docs.github.com/issues/tracking-your-work-with-issues/about-issues)、[プルリクエスト](https://docs.github.com/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)、[ディスカッション](https://docs.github.com/discussions/collaborating-with-your-community-using-discussions/about-discussions) へのコメント
+- 拡張子が `.md` または `.markdown` のファイル
+- [Gists](https://docs.github.com/github/writing-on-github/editing-and-sharing-content-with-gists/creating-gists)内のテキストスニペットの共有
 
-1. ヘッダーを追加する
-2. 画像を追加する
-3. コードサンプルを追加する
-4. タスクリストを作成する
-5. プルリクエストをマージする
+**_ヘッダー_とは？** ヘッダーとは、セクションの先頭に表示される大きめのテキストのことです。サイズは6種類あります。
 
-### このコースの開始方法
+### 例
 
-<!-- コースを開始するには、JavaScript で次のコマンドを実行します:
-'https://github.com/new?' + new URLSearchParams({
-template_owner: 'kuboctopus',
-template_name: 'communicate-using-markdown',
-owner: '@me',
-name: 'skills-communicate-using-markdown',
-description: 'My clone repository',
-visibility: 'public',
-}).toString()
--->
+```md
+# これは `<h1>` ヘッダーで、最も大きいです。
 
-[![start-course](https://user-images.githubusercontent.com/1221423/235727646-4a590299-ffe5-480d-8cd5-8194ea184546.svg)](https://github.com/new?template_owner=kuboctopus&template_name=communicate-using-markdown&owner=%40me&name=skills-communicate-using-markdown&description=My+clone+repository&visibility=public)
+## これは `<h2>` ヘッダーです。
 
-1. **Start course** を右クリックし、リンクを新しいタブで開きます。
-2. 新しいタブでは、ほとんどのプロンプトが自動的に入力されます。
-   - オーナーとして、個人アカウントまたはリポジトリをホストする組織を選択します。
-   - プライベートリポジトリは [Actions の分単位での課金](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions) が発生するため、パブリックリポジトリを作成することをお勧めします。
-   - 下にスクロールし、フォームの下部にある [**Create repository**] ボタンをクリックします。
-3. 新しいリポジトリが作成されたら、約 20 秒待ってからページを更新します。新しいリポジトリの README に記載されている手順に従ってください。
+##### これは `<h6>` ヘッダーで、最も小さいです。
+```
+
+#### 表示例
+
+# これは `<h1>` ヘッダーで、最も大きいです。
+
+## これは `<h2>` ヘッダーです。
+
+##### これは `<h6>` ヘッダーで、最も小さいです。
+
+### :keyboard: アクティビティ: ヘッダーを含むファイルを編集する
+
+1. 新しいブラウザタブを開き、このタブの指示を読みながら、2つ目のタブの手順を実行します。
+1. **pull requests** タブを開きます。
+1. **New pull request** をクリックし、比較するブランチとして `base: main` と `compare: start-markdown` を選択します。
+1. **[Create pull request]** をクリックします。
+1. このプルリクエストで、[**Files Changed**] タブに移動します。空のファイル `index.md` が作成されています。
+1. `index.md` のファイルビューの右上隅にある 3 つの点が並んだ **...** メニューから [**Edit file**] を選択します。
+1. [**Edit file**] タブで、任意のコンテンツの前に `#` とそれに続く **スペース** を追加して、H1 ヘッダーにします。1～6 個の `#` 文字とそれに続く **スペース** を使用して、さらにヘッダーを追加できます。
+1. 新しいコンテンツの上にある [**Preview**] をクリックします。
+1. ページの下部に、ファイルに加えた変更を説明する、短くてわかりやすいコミットメッセージを入力します。
+1. [**Commit changes**] をクリックします。
+1. 約 20 秒待ってから、このページ（手順に従っているページ）を更新します。 [GitHub Actions](https://docs.github.com/en/actions) は次のステップに自動的に更新されます。
 
 <footer>
 
