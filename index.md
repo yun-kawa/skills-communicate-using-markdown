@@ -7,3 +7,8 @@ $ git init
 ``` javascript
 var myVar = "Hello, world!";
 ```
+
+
+- [x] リスト構文は必須です
+- [x] この項目は完了しています
+- [ ] この項目は完了していません
