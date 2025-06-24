@@ -14,34 +14,54 @@ _軽量なテキストフォーマット言語である Markdown を使用して
 </header>
 
 <!--
-<<< 著者注: ステップ 2 >>>
-前のステップを確認した上で、このステップを開始してください。
+<<< 著者注: ステップ 3 >>>
+前のステップを承認することから、このステップを開始します。
 用語を定義し、docs.github.com へのリンクを追加します。
 -->
 
-## ステップ 2: 画像を追加する
+## ステップ 3: コード例を追加する
 
-_ファイルにヘッダーを追加していただき、ありがとうございます :sparkles:_
+_ファイルに画像を追加していただき、ありがとうございます :tada:_
 
-画像を追加しましょう。角括弧内に説明文を入力してください。このテキストは、スクリーンリーダーを使用しているユーザー向けに読み上げられます。また、接続状態が悪い場合など、画像が表示されない場合にも表示されます。画像の構文は以下の通りです。
+コードブロックをいくつか追加しましょう。コードブロックは言語によってレンダリング方法が異なる場合があります。
 
-### 例
+### 例 1
 
-```md
-![Yaktocat の画像](https://octodex.github.com/images/yaktocat.png)
+<pre>
+```
+$ git init
+/Users/skills/Projects/recipe-repository/.git/ に空の Git リポジトリを初期化しました
+```
+</pre>
+
+#### 実行例
+
+```
+$ git init
+/Users/skills/Projects/recipe-repository/.git/ に空の Git リポジトリを初期化しました
 ```
 
-#### 表示例
+### 例 2
 
-<img alt="Yaktocat の画像" src=https://octodex.github.com/images/yaktocat.png width=400>
+<pre>
+``` javascript
+var myVar = "Hello, world!";
+```
+</pre>
 
-### :keyboard: アクティビティ: 画像の追加
+#### 実行例
 
-1. 前回と同様に、このプルリクエストの `index.md` ファイルを編集します。
-1. ファイルに、選択した画像に適した Markdown を追加します。代替テキストも忘れずに含めてください。
-1. **Preview** タブで Markdown の書式設定を確認します。
+```javascript
+var myVar = "Hello, world!";
+```
+
+### :keyboard: アクティビティ: コード例の追加
+
+1. 前回と同様に、このプルリクエスト内のファイルを編集します。
+1. ファイルに、選択したコード例の正しい Markdown を追加します。
+1. **Preview** タブを使用して、Markdown のフォーマットを確認します。
 1. 変更をコミットします。
-1. 約 20 秒待ってから、このページ（手順を実行しているページ）を更新します。 [GitHub Actions](https://docs.github.com/en/actions) は次のステップに自動的に更新されます。
+1. 約 20 秒待ってから、このページ（手順を実行しているページ）を更新します。[GitHub Actions](https://docs.github.com/en/actions) が自動的に次のステップに更新されます。
 
 <footer>
 
